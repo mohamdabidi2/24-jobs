@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+#Header{display: flex;
+justify-content: space-around;
+width: 100%;
+padding-top: 20px;
+min-width: 650px;
+font-family: 'Dosis', sans-serif;
+background: #26272B
+;
+
+
+height:90px}
+.Logo{width: 15%;
+height: 75%;
+
+}
+.search-bar{width: 30%;
+    font-family: 'Dosis', sans-serif;
+height: 50%;
+border-radius: 50px;
+border: none;
+margin-top: 8px;
+text-align: center}
+.search-bar:hover{
+    background-color: #ffde03;
+    color: white;
+    -webkit-animation-name: azer; 
+    -webkit-animation-duration: 4s; 
+    animation-duration: 4s;
+    
+  }
+
+  
+ 
+  @-webkit-keyframes azer {
+ 
+    from {background-color: white; }
+    to {background-color:#FFDE03;}
+  }
+  
+
+  @keyframes azer {
+
+    from {background-color: white;}
+    to {background-color: #FFDE03;}
+  }
+#signup{
+    font-size: 140%;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+
+
+}
+#login{
+    font-size: 140%;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+
+}
+#login:hover{
+    color: #1976D2;
+    cursor: pointer;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s; 
+    animation-duration: 4s;
+    font-weight: bolder
+  }
+  
+ 
+  @-webkit-keyframes example {
+ 
+    from {color: #FFDE03;}
+    to {color:#1976D2;}
+  }
+  
+
+  @keyframes example {
+
+    from {color: #FFDE03;}
+    to {color: #1976D2;
+    }
+  }
+#signup{
+    font-size: 140%;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+
+}
+#signup:hover{
+    color: #1976D2;
+    cursor: pointer;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s; 
+    animation-duration: 4s;
+  }
+  
+ 
+  @-webkit-keyframes example {
+ 
+    from {color: #FFDE03;}
+    to {color:#1976D2;}
+  }
+  
+
+  @keyframes example {
+
+    from {color: #FFDE03;}
+    to {color: #1976D2;}
+  }

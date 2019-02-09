@@ -1,0 +1,279 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+body{width: 100% ; min-width: 650px}
+.categorie{background: white;
+color: #26272B;
+width: 26%;
+height: 100%;
+margin-top:1%  ;
+text-align: center;
+display:flex;
+flex-flow: column}
+.categorie>h1{color: #26272B;}
+#our-av{text-align: center;
+  
+color: #26272B;
+font-size: 240%;
+margin-bottom: 0px}
+.categorie>span{text-align: left;
+position: relative;
+cursor: pointer;
+width: calc(100%-60px);
+padding:20px 0px 20px 60px }
+.categorie>span:hover{background: #834BFF}
+li{list-style-type: none}
+#introduction-slide-show{
+    position: relative;
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:1.5% 0 0 0.5%  ;
+}
+.home-intro{display: flex;
+justify-content: center}
+#price{cursor:pointer;display: flex; justify-content: left;margin-left: 20%;padding-bottom: 5%}
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+.Agriculture-drop-menu{
+    position: absolute;
+   right: -73%;
+   top: -26%;
+    background: #834BFF ;
+    display: none;
+    padding: 20px 40px;
+    z-index: 66666;
+    
+}
+.price-filter{display: none;}
+#checkbox{display: none}
+#checkbox:checked ~ .price-filter{display: flex;
+justify-content: space-evenly;
+}
+.Agriculture:hover .Agriculture-drop-menu {
+    display: block;
+  }
+  .price-filter>input{width: 30%;
+height: 25px;
+margin:10% 0;
+text-align: center}
+.Agriculture-drop-menu>li{
+    padding: 3% 2%
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+/*product*/
+#product{
+    width: 300px;
+    height: 400px;
+    display: block;
+    background: #26272B;
+    margin:3%;
+    min-width: 300px;
+
+}
+#product:hover{-webkit-box-shadow: 5px 6px 6px -4px #000000; 
+    box-shadow: 5px 6px 6px -4px #000000;border-radius: 2%;
+    cursor: pointer;}
+#product>*{margin: 5% 0}
+#product-title{font-size: 20px;
+color: white;
+display: flex;justify-content: center;
+}
+#Product-img{width:95%;height: 50%; margin: 0 2.5%;
+border-radius: 1%}
+#Product-rank{display: flex;justify-content: center;
+color: white}
+.spacial-one{display: flex;
+justify-content: space-between;
+
+margin-bottom: 0;
+
+color: white}
+#Product-price{margin-top: 4%;margin-bottom: 0;margin-left: 5%}
+#Product-more{margin-top: 4%;margin-right: 5%;margin-bottom: 0;border: 1px solid rgb(241, 41, 41);border-radius:20px;padding: 0 4% 1% 4%}
+#Product-price:hover{color: rgb(187, 187, 187) }
+#Product-more:hover{color: rgb(255, 255, 255);background:rgb(241, 41, 41);border: 1px solid none;border-radius:20px;padding: 0 4% 1% 4%}
+#products{display: flex;
+    justify-content: center;
+    width: 100%;
+flex-flow:  wrap;
+}
+@keyframes AutoSlide {
+	0% {
+		left: 0px; 
+	}
+	15% {
+		left: 1000px; 
+	}
+	35% {
+		left: 1000px; 
+	}
+	50% {
+		left: -1000px; 
+	}
+	70% {
+		left: -1000px; 
+	}
+	85% {
+		left: 500px; 
+	}
+	100% {
+		left: 0px; 
+	}
+}
+@keyframes AutoSlide {
+	0%, 15%, 100% {
+		left: 0px; 
+	}
+	35%, 50% {
+		left: -500px; 
+	}
+	70%, 85% {
+		left: -500px;
+	}
+}
+#slideshow {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	margin:  20px auto;
+	overflow: hidden;
+}
+#sContent li {
+	display: inline;
+}
+#sContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 450px;
+	margin: 0;            
+	padding: 0;
+	
+	
+	animation-name: AutoSlide;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
