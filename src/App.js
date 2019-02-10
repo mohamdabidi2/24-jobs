@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from './components/jsx/header'
 import Home from './components/jsx/Home.jsx'
+import User from './components/jsx/user'
 import Footer from './components/jsx/footer'
+import Login from './components/jsx/login'
 import Profil from './components/jsx/profil'
 import './App.css';
 
@@ -10,8 +12,9 @@ class App extends Component {
     return (
       <div className="App">
    <Header/>
- <Profil/> 
+ {/* <Profil/>  */}
    {/* <Home/> */}
+   <Login/>
    <Footer/>
       </div>
     );
