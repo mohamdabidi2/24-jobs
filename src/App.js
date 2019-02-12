@@ -5,6 +5,7 @@ import User from './components/jsx/user'
 import Footer from './components/jsx/footer'
 import Login from './components/jsx/login'
 import Profil from './components/jsx/profil'
+import Dashboard from'./components/jsx/dashboard'
 import './App.css';
 
 class App extends Component {
@@ -12,9 +13,9 @@ class App extends Component {
     return (
       <div className="App">
    <Header/>
- {/* <Profil/>  */}
-   {/* <Home/> */}
-   <Login/>
+ <Profil/> 
+   {/* <Home/>
+   <Login/> */}
    <Footer/>
       </div>
     );

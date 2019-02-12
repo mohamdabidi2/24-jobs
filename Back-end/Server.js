@@ -94,7 +94,7 @@ getAllUser().then((data=>{
 // routage avec express methode get  utilisateur avec un id précie
 app.get('/users/:id',(req,res)=>{
 console.log(req.params.id)
-    User.findOne({phone:req.params.id}).then(data=>{
+    User.findOne({_id:req.params.id}).then(data=>{
         res.send(data)
     })
 
@@ -144,65 +144,13 @@ app.delete('/users/delete/:user', (req,res)=>{
         
     })
     //routage avec put pour update ad 
-    app.put('/ad/update/:ad',(req,res)=>{
- 
-    let {ad} = req.params
-
-
- let a = req.body
-  Ad.findByIdAndUpdate(ad, a,(err,data)=>{
-      console.log(data)
-    res.send(data)
-
-  })
-
-    })
-
-
-app.get('/ads',(req,res)=>{
-
-    getAds().then((data)=>[
-        res.send(data)
-    ])
-})
-
-app.get('/ad/:id',(req,res)=>{
-
-  findOnAd(req.params.id).then(data=>{
-      res.send(data)
-  })
-
-})
-
-
-app.post('/login',(req,res)=>{
-    login(req.body.login,req.body.password).then(data=>{
-
-     const token  =  jwt.sign({user:data},"jwtPrivateToken")
   
-        res.header("x-auth-token",token).send(data)
-    })
-})
 app.post('/fileup',upload.single('img'),(req,res)=>{
     console.log(req.body)
     console.log(req.file)
 })
 
-app.post('/ads/add',upload.single('img') ,(req,res)=>{
-   console.log(req.file)
 
-    createAd(req.body).then(data=>{
-        res.send(data)
-    })
-})
-
-app.delete('/ad/delete/:id',(req,res)=>{
-    let id= req.params.id
-    Ad.findByIdAndDelete(mongoose.Types.ObjectId(id)).then(data=>{
-        console.log(data)
-        res.send('ok')
-    })
-})
 
 app.get('/search/:city/:search/:category',(req,res)=>{
 

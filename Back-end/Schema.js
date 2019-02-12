@@ -7,6 +7,13 @@ const userSchema = new mongoose.Schema({
     phone:{type:String,required:true},
     profil:{type:String,default:'user'},
     password:{type:String,required:true},
+    activity:{
+        name :String
+    },
+    desponibilité :Boolean,
+    hour_price:String,
+    hour_day:String,
+    review:String
     })
     module.exports.userSchema = userSchema
 
